@@ -22,15 +22,8 @@ This project demonstrates how to design and build a **production-style event dat
 
 ## 🏗️ High-Level Architecture
 
-Application / SDK
-↓
-Ingestion API (FastAPI)
-↓
-Kafka 
-↓
-Spark Structured Streaming
-↓
-S3 Data Lake (Bronze / Silver)
+![High-Level Architecture](architecture/architecture.png)
+
 
 
 ### Core Principles
