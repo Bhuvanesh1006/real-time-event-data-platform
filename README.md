@@ -109,8 +109,11 @@ Detailed operational steps are documented in `RUNBOOK.md`.
 
 Below are screenshots demonstrating the platform running end-to-end in a real environment.
 
+### SDK Producing Events
+![SDK Events](screenshots/SDK_event_sent.png)
+
 ### Kafka & Zookeeper Running
-![Kafka Running](screenshots/Zookerper.png)
+![Kafka Running](screenshots/Zookeeper.png)
 
 ### Spark Structured Streaming (Bronze & Silver)
 ![Spark Streaming](screenshots/Spark_submit.png)
@@ -118,8 +121,6 @@ Below are screenshots demonstrating the platform running end-to-end in a real en
 ### Spark configuration
 ![Spark config](screenshots/Spark_config.png)
 
-### SDK Producing Events
-![SDK Events](screenshots/Sdk_event_sent.png)
 
 ---
 
