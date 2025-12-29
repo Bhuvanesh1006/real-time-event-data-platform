@@ -107,12 +107,19 @@ Detailed operational steps are documented in `RUNBOOK.md`.
 
 ---
 
-## 📸 Proof of Execution
+Below are screenshots demonstrating the platform running end-to-end in a real environment.
 
-This repository includes:
-- Screenshots of Kafka, Spark Streaming, and Ingestion API running
-- SDK event production evidence
-- End-to-end data flow verification
+### Kafka & Zookeeper Running
+![Kafka Running](screenshots/Zookerper.png)
+
+### Spark Structured Streaming (Bronze & Silver)
+![Spark Streaming](screenshots/Spark_submit.png)
+
+### Spark configuration
+![Spark config](screenshots/Spark_config.png)
+
+### SDK Producing Events
+![SDK Events](screenshots/Sdk_event_sent.png)
 
 ---
 
