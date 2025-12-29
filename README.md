@@ -66,16 +66,23 @@ This project demonstrates how to design and build a **production-style event dat
 ---
 
 ## 🥉 Bronze Layer (Raw Events)
-- Stores events exactly as ingested
-- Append-only and immutable
-- Used for reprocessing, debugging, and audits
+The Bronze layer stores immutable, append-only raw events ingested from Kafka:
+
+- Preserves original event payloads
+- Acts as the system of record
+- Enables replay, backfills, and audits
+- Contains no business logic or filtering
 
 ## 🥈 Silver Layer (Business-Ready Events)
+The Silver layer applies domain-specific transformations on top of raw Bronze events:
+
 - Filters valid event types
 - Normalizes timestamps
-- Adds experiment metadata
-- Partitioned for efficient analytics
-- Safe for downstream consumption
+- Adds experiment semantics
+- Produces analytics-ready datasets
+- Remains fully replayable from Bronze
+
+This ensures downstream consumers do not duplicate business logic.
 
 ---
 
