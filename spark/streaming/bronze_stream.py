@@ -50,10 +50,10 @@ bronze_df = (
     .outputMode("append")
     .option(
         "checkpointLocation",
-        "s3://<YOUR_BUCKET>/checkpoints/bronze"
+        "s3://practice_bucket/checkpoints/bronze"
     )
     .start(
-        "s3://<YOUR_BUCKET>/bronze/events"
+        "s3://practice_bucket/bronze/events"
     )
     .awaitTermination()
 )
