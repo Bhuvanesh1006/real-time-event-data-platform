@@ -13,7 +13,7 @@ spark.sparkContext.setLogLevel("WARN")
 bronze_df = (
     spark.readStream
     .format("parquet")
-    .load("s3://<YOUR_BUCKET>/bronze/events")
+    .load("s3://practice_bucket/bronze/events")
 )
 
 # Silver transformations (business logic)
@@ -49,11 +49,11 @@ silver_df = (
     .outputMode("append")
     .option(
         "checkpointLocation",
-        "s3://<YOUR_BUCKET>/checkpoints/silver"
+        "s3://practice_bucket/checkpoints/silver"
     )
     .partitionBy("event_date")
     .start(
-        "s3://<YOUR_BUCKET>/silver/events"
+        "s3://practice_bucket/silver/events"
     )
     .awaitTermination()
 )
